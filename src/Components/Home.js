@@ -1,8 +1,10 @@
-import { Container, Nav, Navbar } from "react-bootstrap";
-import { Link, Outlet } from "react-router-dom";
+import React from "react";
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-function App() {
-  return (<>
+
+const Home = () =>{
+  return(<>
     <Nav className="navbar navbar-default">
       <Container className="container">
         <div className="navbar-header">
@@ -16,16 +18,14 @@ function App() {
         </div>
         <Navbar.Collapse className="collapse navbar-collapse" id="myNavbar">
           <ul className="nav navbar-nav navbar-right">
-            <li><Link to="/login">Login</Link></li>
-            <li><Link to="/logout">Register</Link></li>
-
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/profile">Profile</Link></li>
+            <li><Link to="/gallery">Gallery</Link></li>
           </ul>
         </Navbar.Collapse>
       </Container>
     </Nav>
-    <nav>
-      <Outlet />
-    </nav>
+
 
     <div className="container-fluid bg-1 text-center">
       <h3 className="margin">Who Am I?</h3>
@@ -67,9 +67,7 @@ function App() {
     <footer className="container-fluid bg-4 text-center">
       <p>Bootstrap Theme Made By <Link to="https://www.w3schools.com">www.w3schools.com</Link></p>
     </footer>
-  </>
 
-  );
+  </>)
 }
-
-export default App;
+export default Home

@@ -11,14 +11,15 @@ const routing = createBrowserRouter([
     path: "/",
     element: <App />,
     children:[
-      {
-        path:"/login",
-        element:<Login/>
-      }
+
 
     ]
 
   },
+  {
+    path:"/login",
+    element:<Login/>
+  }
 ])
 
 
